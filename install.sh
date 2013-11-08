@@ -44,5 +44,5 @@ mdadm --create /dev/md4 --level=1 --raid-devices=2 /dev/sd[ab]5 # data
 
 
 # Download bootstrap image
-wget http://archlinux.limun.org/iso/2013.11.01/archlinux-bootstrap-2013.11.01-x86_64.tar.gz /tmp
-tar xzf /tmp/archlinux-bootstrap-2013.11.01-x86_64.tar.gz /tmp
+wget -P /tmp http://archlinux.limun.org/iso/2013.11.01/archlinux-bootstrap-2013.11.01-x86_64.tar.gz /tmp
+tar xzvf /tmp/archlinux-bootstrap-2013.11.01-x86_64.tar.gz 
