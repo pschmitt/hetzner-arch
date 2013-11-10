@@ -32,3 +32,15 @@ By default it will create a RAID 1 array with following partition scheme:
 ```
 wget https://raw.github.com/pschmitt/hetzner-arch/master/install.sh
 sh install.sh
+
+
+## Usage
+
+By default this script will install arch on /dev/sd[ab]
+
+### Options
+
+-r: Rescue mode
+    Try to mount HDDs and chroot to it
+
+
