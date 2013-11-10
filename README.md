@@ -32,7 +32,7 @@ Partition sizes:
 
 * `/dev/md0`     100 MiB
 * `/dev/md[123]` 30 GiB
-* `/dev/md4`     All the space left
+* `/dev/md4`     What's left 
 
 ## Installation
 
