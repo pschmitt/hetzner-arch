@@ -3,12 +3,13 @@
 
 ## Description
 
-ArchLinux install script for a Hetzner root server
+[ArchLinux](https://www.archlinux.org/) install script for a [Hetzner root server](http://www.hetzner.de/hosting/produktmatrix/rootserver)
 
 ## Customization
 
-You definetely should edit this script before running it.
-By default it will create a RAID 1 array with following partition scheme:
+**You definetely should edit this script before running it.**
+
+By default it will create a [RAID 1](http://en.wikipedia.org/wiki/Raid_1#RAID_1) array with following partition scheme:
 
 ```
 # 
@@ -27,6 +28,12 @@ By default it will create a RAID 1 array with following partition scheme:
 
 ```
 
+Partition sizes:
+
+* `/dev/md0`     100 MiB
+* `/dev/md[123]` 30 GiB
+* `/dev/md4`     All the space left
+
 ## Installation
 
 ```
@@ -42,5 +49,4 @@ By default this script will install arch on /dev/sd[ab]
 
 -r: Rescue mode
     Try to mount HDDs and chroot to it
-
 
