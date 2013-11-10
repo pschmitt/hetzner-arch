@@ -112,7 +112,7 @@ echo "LANG=en_US.utf8" > /etc/locale.conf
 # echo "KEYMAP=de-latin1" > /etc/vconsole.conf
 
 # RAID config
-pacman -S mdadm
+pacman -S --noconfirm mdadm
 mdadm --detail --scan >> /etc/mdadm.conf
 
 # Kernel
@@ -121,7 +121,7 @@ sed -i '/^HOOK/s/\(filesystems\)/mdadm_udev \1/' mkinitcpio.conf
 mkinitcpio -p linux
 
 # GRUB2
-pacman -S grub
+pacman -S --noconfirm grub
 # Reduce timeout to 1 second
 sed -i '/^GRUB_TIMEOUT/s/\(GRUB_TIMEOUT=\)\d/\11/' /etc/grub.d/grub
 
@@ -142,7 +142,7 @@ systemctl enable dhcpcd@eth0.service
 # echo 'r8169' > /etc/modules-load.d/realtek.conf
 
 # SSH
-pacman -S openssh
+pacman -S --noconfirm openssh
 systemctl enable sshd
 
 # Exit chroot and umount
