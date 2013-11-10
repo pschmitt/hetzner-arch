@@ -32,7 +32,7 @@ By default it will create a RAID 1 array with following partition scheme:
 ```
 wget https://raw.github.com/pschmitt/hetzner-arch/master/install.sh
 sh install.sh
-
+```
 
 ## Usage
 
