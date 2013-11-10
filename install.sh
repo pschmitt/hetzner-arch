@@ -1,6 +1,7 @@
 #!/bin/bash -x
 
-HOSTNAME=hetzLax
+HOSTNAME="hetzLax"
+TIMEZONE="Europe/Berlin"
 ARCH_BOOTSTRAP="archlinux-bootstrap-2013.11.01-x86_64.tar.gz"
 ARCH_BOOTSTRAP_URL="http://archlinux.limun.org/iso/2013.11.01/$ARCH_BOOTSTRAP" 
 
@@ -165,7 +166,7 @@ function setup_hostname() {
 
 function setup_timezone() {
     # Timezone
-    ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+    ln -s /usr/share/zoneinfo/$TIMEZONE /etc/localtime
 }
 
 function setup_locale() {
@@ -201,7 +202,8 @@ function setup_grub() {
     # Set root (/boot partition)
     echo -e 'insmod mdraid\nset root=(md0)' >> /etc/grub.d/40_custom
     # Install grub and generate config
-    grub-install --target=i386-pc --recheck --debug /dev/sda && grub-install --target=i386-pc --recheck --debug /dev/sdb 
+    grub-install --target=i386-pc --recheck --debug /dev/sda 
+    grub-install --target=i386-pc --recheck --debug /dev/sdb 
     grub-mkconfig -o /boot/grub/grub.cfg
 }
 
