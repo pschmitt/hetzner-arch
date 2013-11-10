@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-HOSTNAME=$HOSTNAME
+HOSTNAME=hetzLax
 ARCH_BOOTSTRAP="archlinux-bootstrap-2013.11.01-x86_64.tar.gz"
 ARCH_BOOTSTRAP_URL="http://archlinux.limun.org/iso/2013.11.01/$ARCH_BOOTSTRAP" 
 
